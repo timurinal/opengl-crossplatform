@@ -9,7 +9,6 @@ add_subdirectory("external/glfw")
 include_directories("external/glfw/include")
 
 include_directories(${GLAD_PATH}/include)
-include_directories("external/stb_image")
 include_directories("external")
 
 add_library(glad "${GLAD_PATH}/src/glad.c")
@@ -24,7 +23,6 @@ endif()
 include_directories(src/includes)
 
 add_executable(opengl_test src/main.cpp
-        external/stb_image/stb_image.h
         src/includes/shader.h
         src/rendering/shader.cpp
 )
