@@ -86,6 +86,7 @@ int main() {
     }
 
     glfwDestroyWindow(window);
+    glfwPollEvents(); // Fixes a segmentation fault caused by the libEGL_nvidia driver on Wayland
     glfwTerminate();
 
     return 0;
